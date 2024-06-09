@@ -1,0 +1,173 @@
+.yt-player {
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+#player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  background-image: url("https://cdn.eversoft.lk/music-js/img/controller-bg.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+#play-pause,
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f83468;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#play-pause:hover,
+#prev:hover,
+#next:hover {
+  background-color: #f20746;
+}
+
+#volume-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#volume {
+  width: 100%;
+  margin-left: 10px;
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f83468;
+  cursor: pointer;
+}
+
+#volume::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f83468;
+  cursor: pointer;
+}
+
+#volume::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f83468;
+  cursor: pointer;
+}
+
+.help-button-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.help-button {
+  height: 60px;
+  width: 60px;
+  font-family: "Gotham A", "Gotham B";
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 50%;
+  border: 0 none;
+  background: black;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transform: scale(1);
+  transition: all 200ms ease;
+}
+
+.help-button:hover,
+.help-button:focus,
+.help-button:active {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+
+.help-button span {
+  display: block;
+  font-size: 2em;
+  transform: scale(1);
+  transition: transform 100ms ease;
+}
+
+.help-button:hover span,
+.expanded .help-button span,
+.expanded .help-button span {
+  transform: scale(1.25);
+}
+
+.expanded .help-button {
+  transform: scale(0.5);
+  color: rgba(255, 255, 255, 0.5);
+  background: black;
+}
+
+.help-list {
+  font-family: "Gotham A", "Gotham B";
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  transition: all 200ms ease;
+  transform: translate(0, 90px) scale(0.5);
+  transform-origin: bottom center;
+  opacity: 0;
+}
+
+.expanded .help-list {
+  transform: translate(0px, 20px) scale(1);
+  opacity: 1;
+}
+
+.help-list li {
+  margin-bottom: 1em;
+}
+
+.help-list a {
+  color: #192230;
+  text-decoration: none;
+}
+
+.help-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
